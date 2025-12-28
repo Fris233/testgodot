@@ -1,2 +1,9 @@
-# Godot 4+ specific ignores
+android/build/
+android/.gradle/
+android/local.properties
+*.apk
+*.aab
+.import/
+.godot/
+.gitignore~
 .godot/

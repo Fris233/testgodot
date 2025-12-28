@@ -8,7 +8,7 @@ var output = Vector2.ZERO
 
 # Maximum distance the knob can move (Radius of the base)
 # Adjust this based on your image size (e.g., 64 if image is 128px wide)
-var max_distance = 40 
+var max_distance = 50 
 
 func _gui_input(event):
 	if event is InputEventScreenTouch or event is InputEventScreenDrag:
