@@ -7,3 +7,4 @@ android/local.properties
 .godot/
 .gitignore~
 .godot/
+*.zip
