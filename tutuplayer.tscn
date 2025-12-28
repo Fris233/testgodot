@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8a0wrfmhu40j"]
+
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_7gvwu"]
+[ext_resource type="Script" uid="uid://bmwb7drpojccx" path="res://tutuplayer.gd" id="1_ek44r"]
+[ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="3_ekcj8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ek44r"]
+radius = 30.16
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ekcj8"]
+radius = 38.013157
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1uq5"]
+bg_color = Color(0.15294118, 0.16862746, 0.1882353, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekcj8"]
+bg_color = Color(0.3882353, 0.8, 0.37254903, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="HaveSex" type="CharacterBody2D"]
+platform_floor_layers = 4294967040
+script = ExtResource("1_ek44r")
+
+[node name="HappyBoo" parent="." instance=ExtResource("1_7gvwu")]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ek44r")
+debug_color = Color(0, 0.9843137, 0.4, 0.41960785)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Gun" parent="." instance=ExtResource("3_ekcj8")]
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CircleShape2D_ekcj8")
+debug_color = Color(0.8449768, 0.3416498, 0.4371678, 0.41960785)
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -75.0
+offset_top = -133.0
+offset_right = 76.0
+offset_bottom = -106.0
+theme_override_styles/background = SubResource("StyleBoxFlat_g1uq5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ekcj8")
+value = 100.0
+show_percentage = false
