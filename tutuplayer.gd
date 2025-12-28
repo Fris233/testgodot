@@ -9,11 +9,17 @@ var vuln := 5.0 # damage taken per enemy per second
 @onready var guns = [
 	$mattgun,
 	$purplegun,
-	$gun
+	$gun,
+	$gun67
 ]
+@onready var joystick = $UI_Layer/VirtualJoystick
 
 func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
+	# 2. Check Joystick Input (if joystick is being used, it overrides keyboard)
+	if joystick and joystick.output != Vector2.ZERO:
+		direction = joystick.output
 	velocity = direction * speed
 	move_and_slide()
 	if velocity.length() > 0.0:
@@ -41,6 +47,7 @@ func _ready():
 	$UI_Layer/ChoiceMenu/Button1.pressed.connect(_on_button_1_pressed)
 	$UI_Layer/ChoiceMenu/Button2.pressed.connect(_on_button_2_pressed)
 	$UI_Layer/ChoiceMenu/Button3.pressed.connect(_on_button_3_pressed)
+	$UI_Layer/ChoiceMenu/Button4.pressed.connect(_on_button_4_pressed)
 	# Connect the 30s timer
 	timer.timeout.connect(_on_selection_timer_timeout)
 
@@ -81,3 +88,6 @@ func _on_button_2_pressed():
 
 func _on_button_3_pressed():
 	choose_gun(2)
+	
+func _on_button_4_pressed():
+	choose_gun(3)

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyr62xbn25ckj"]
+
+[ext_resource type="Script" uid="uid://b4bsxumblkdt5" path="res://six_bullet.gd" id="1_v0i7w"]
+[ext_resource type="Texture2D" uid="uid://c3qtvmccowpsc" path="res://sixgun/seven.png" id="2_454kr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2b2rl"]
+radius = 35.0
+
+[node name="sixBullet" type="Area2D"]
+top_level = true
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_v0i7w")
+
+[node name="Projectile" type="Sprite2D" parent="."]
+position = Vector2(-4.7683716e-07, 0)
+rotation = 1.5707964
+scale = Vector2(0.2582002, 0.28674367)
+texture = ExtResource("2_454kr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2b2rl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8a0wrfmhu40j"]
+[gd_scene load_steps=12 format=3 uid="uid://c8a0wrfmhu40j"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_7gvwu"]
 [ext_resource type="Script" uid="uid://bmwb7drpojccx" path="res://tutuplayer.gd" id="1_ek44r"]
 [ext_resource type="PackedScene" uid="uid://cp8aqqpy68x1e" path="res://mattgun.tscn" id="2_ekcj8"]
 [ext_resource type="PackedScene" uid="uid://dbgmb2oaydsud" path="res://purplegun.tscn" id="3_ekcj8"]
 [ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="4_bx3gj"]
+[ext_resource type="PackedScene" uid="uid://cfrp2irh3h0hh" path="res://virtual_joystick.tscn" id="5_6hb5w"]
+[ext_resource type="PackedScene" uid="uid://dljilbcmj0opm" path="res://gun_67.tscn" id="5_mvnsu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ek44r"]
 radius = 30.16
@@ -36,8 +38,22 @@ script = ExtResource("1_ek44r")
 
 [node name="gun" parent="." instance=ExtResource("4_bx3gj")]
 
+[node name="gun67" parent="." instance=ExtResource("5_mvnsu")]
+
 [node name="UI_Layer" type="CanvasLayer" parent="."]
 layer = 100
+
+[node name="VirtualJoystick" parent="UI_Layer" instance=ExtResource("5_6hb5w")]
+visible = false
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 170.0
+offset_top = -216.0
+offset_right = 210.0
+offset_bottom = -176.0
+grow_vertical = 0
+size_flags_horizontal = 0
 
 [node name="ChoiceMenu" type="Control" parent="UI_Layer"]
 process_mode = 3
@@ -77,6 +93,14 @@ offset_top = 43.0
 offset_right = 196.0
 offset_bottom = 135.0
 text = "Bro likes mid"
+
+[node name="Button4" type="Button" parent="UI_Layer/ChoiceMenu"]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 38.0
+offset_right = 605.0
+offset_bottom = 130.0
+text = "Get off TikTok"
 
 [node name="SelectionTimer" type="Timer" parent="."]
 wait_time = 10.0
