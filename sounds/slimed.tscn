@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfskwimuna586"]
+
+[ext_resource type="AudioStream" uid="uid://c2lpm7nq64u4d" path="res://sounds/slimed.mp3" id="1_5hat7"]
+[ext_resource type="Script" uid="uid://dbnd271d6jhu6" path="res://sounds/slimed.gd" id="2_otrsh"]
+
+[node name="slimed" type="AudioStreamPlayer2D"]
+unique_name_in_owner = true
+stream = ExtResource("1_5hat7")
+script = ExtResource("2_otrsh")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
