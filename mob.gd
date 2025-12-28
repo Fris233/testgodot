@@ -6,6 +6,7 @@ var health := 3
 @onready var speed : float = player.speed /2
 
 const deathanim = preload("res://smoke_explosion/smoke_explosion.tscn")
+@onready var deathsound = %slimed
 
 func _ready():
 	%Slime.play_walk()
@@ -22,6 +23,8 @@ func take_damage():
 		death()
 
 func death():
+	%slimed.process_mode = Node.PROCESS_MODE_ALWAYS
+	%slimed.play
 	queue_free()
 	var death := deathanim.instantiate()
 	get_parent().add_child(death)

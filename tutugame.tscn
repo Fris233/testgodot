@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c8a0wrfmhu40j" path="res://tutuplayer.tscn" id="1_hk3wh"]
 [ext_resource type="Script" uid="uid://ctii3qslsbs2j" path="res://tutugame.gd" id="1_s1myh"]
 [ext_resource type="PackedScene" uid="uid://dq3r015sr1uql" path="res://pine_tree.tscn" id="2_s1myh"]
-[ext_resource type="AudioStream" uid="uid://drheeex55xr8b" path="res://gameover.mp3" id="4_a4koy"]
+[ext_resource type="AudioStream" uid="uid://drheeex55xr8b" path="res://sounds/gameover.mp3" id="4_a4koy"]
 
 [sub_resource type="Curve2D" id="Curve2D_a4koy"]
 _data = {
