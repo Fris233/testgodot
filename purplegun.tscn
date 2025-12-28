@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbgmb2oaydsud"]
+
+[ext_resource type="Script" uid="uid://cs7knoxtk6voi" path="res://purplegun.gd" id="1_xg1dn"]
+[ext_resource type="Texture2D" uid="uid://ds1jr7u2f780m" path="res://purple gun/only hand.png" id="2_n8mea"]
+[ext_resource type="PackedScene" uid="uid://dnygh2qbj6wht" path="res://gojo-purp-sound.tscn" id="3_n8mea"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
+radius = 385.1052
+
+[node name="purplegun" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_xg1dn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dk5gl")
+
+[node name="Pivot" type="Marker2D" parent="."]
+
+[node name="Pistol" type="Sprite2D" parent="Pivot"]
+position = Vector2(137, -22.000011)
+rotation = 0.7211815
+scale = Vector2(0.30858403, 0.308584)
+texture = ExtResource("2_n8mea")
+
+[node name="Bullleter" type="Marker2D" parent="Pivot/Pistol"]
+unique_name_in_owner = true
+position = Vector2(59.131054, -133.9689)
+rotation = -0.66282314
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.11
+autostart = true
+
+[node name="bulletsound" parent="Timer" instance=ExtResource("3_n8mea")]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

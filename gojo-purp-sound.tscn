@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnygh2qbj6wht"]
+
+[ext_resource type="AudioStream" uid="uid://b1y2buhx2mhyr" path="res://sounds/hollowpurple (mp3cut.net).mp3" id="1_n7wmy"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_n7wmy")

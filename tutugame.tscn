@@ -21,6 +21,7 @@ layer = -1
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 1994.0
 offset_bottom = 1150.0
+color = Color(0.08235294, 0.34901962, 0.24705882, 1)
 
 [node name="HaveSex" parent="." instance=ExtResource("1_hk3wh")]
 position = Vector2(986, 541)

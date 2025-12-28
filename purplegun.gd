@@ -1,6 +1,5 @@
 extends Area2D
-var bullet := preload("res://bullet.tscn")
-var equipped := true
+var bullet = preload("res://purple_bullet.tscn")
 
 func _physics_process(delta: float) -> void:
 	var enemies_in_range = get_overlapping_bodies()
@@ -16,7 +15,7 @@ func shoot():
 	%Bullleter.add_child(new_bullet)
 
 
-
 func _on_timer_timeout() -> void:
-	%gunsound.play()
+	%bulletsound.play()
+	await get_tree().create_timer(2.0).timeout
 	shoot()

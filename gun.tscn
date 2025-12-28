@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://du5i8r7jdycua"]
+[gd_scene load_steps=5 format=3 uid="uid://du5i8r7jdycua"]
 
 [ext_resource type="Script" uid="uid://bpyfw0mh6bsnv" path="res://gun.gd" id="1_dk5gl"]
 [ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://pistol/pistol.png" id="1_vk1bi"]
+[ext_resource type="AudioStream" uid="uid://c4ebi85wc8vgg" path="res://sounds/gunsound.mp3" id="3_kw0bs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
 radius = 385.1052
@@ -27,5 +28,9 @@ position = Vector2(26, -11)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.333
 autostart = true
+
+[node name="gunsound" type="AudioStreamPlayer" parent="Timer"]
+unique_name_in_owner = true
+stream = ExtResource("3_kw0bs")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

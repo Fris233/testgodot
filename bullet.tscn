@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dftkbqwsfd68r" path="res://pistol/projectile.png" id="2_t4vbm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2b2rl"]
-radius = 17.029387
+radius = 12.0415945
 
 [node name="Bullet" type="Area2D"]
 top_level = true
