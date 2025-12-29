@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ifene3xl4vtc"]
+[gd_scene load_steps=4 format=3 uid="uid://dbakchua5rbe6"]
 
 [ext_resource type="Script" uid="uid://cack1lqt2f5mq" path="res://bullet_template.gd" id="1_v8qja"]
 [ext_resource type="Texture2D" uid="uid://dftkbqwsfd68r" path="res://pistol/projectile.png" id="2_t4vbm"]

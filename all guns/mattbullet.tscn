@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b33lv58kl4cl0"]
+[gd_scene load_steps=4 format=3 uid="uid://dn7611fnlye45"]
 
 [ext_resource type="Script" uid="uid://cack1lqt2f5mq" path="res://bullet_template.gd" id="1_nxe2f"]
 [ext_resource type="Texture2D" uid="uid://jltsbui25mj6" path="res://mattgun/Sbul.png" id="2_nxe2f"]

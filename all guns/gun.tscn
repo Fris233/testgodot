@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0qcqbb3he8o0"]
+[gd_scene load_steps=6 format=3 uid="uid://du5i8r7jdycua"]
 
 [ext_resource type="Script" uid="uid://brxx0dev2acc4" path="res://gun_template.gd" id="1_8iju2"]
 [ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://pistol/pistol.png" id="1_vk1bi"]
-[ext_resource type="PackedScene" path="res://bullet.tscn" id="2_7vd5q"]
+[ext_resource type="PackedScene" uid="uid://dbakchua5rbe6" path="res://bullet.tscn" id="2_7vd5q"]
 [ext_resource type="AudioStream" uid="uid://c4ebi85wc8vgg" path="res://sounds/gunsound.mp3" id="3_kw0bs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]

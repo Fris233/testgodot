@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c83fe5g54lyyc"]
+[gd_scene load_steps=7 format=3 uid="uid://bro2vg8ygdrf1"]
 
 [ext_resource type="Script" uid="uid://brxx0dev2acc4" path="res://gun_template.gd" id="1_4lpjm"]
-[ext_resource type="PackedScene" uid="uid://b6qyc74j4akbc" path="res://purple_bullet.tscn" id="2_ie6ul"]
+[ext_resource type="PackedScene" uid="uid://bmxbd4u4ed6mx" path="res://purple_bullet.tscn" id="2_ie6ul"]
 [ext_resource type="Texture2D" uid="uid://ds1jr7u2f780m" path="res://purple gun/only hand.png" id="2_n8mea"]
-[ext_resource type="PackedScene" path="res://gojo-purp-sound.tscn" id="3_n8mea"]
+[ext_resource type="PackedScene" uid="uid://dnygh2qbj6wht" path="res://gojo-purp-sound.tscn" id="3_n8mea"]
 [ext_resource type="AudioStream" uid="uid://brteasiv16pvo" path="res://sounds/hollowpurple.mp3" id="3_shaev"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]

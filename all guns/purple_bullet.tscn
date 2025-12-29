@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6qyc74j4akbc"]
+[gd_scene load_steps=4 format=3 uid="uid://bmxbd4u4ed6mx"]
 
 [ext_resource type="Script" uid="uid://cack1lqt2f5mq" path="res://bullet_template.gd" id="1_2jypp"]
 [ext_resource type="Texture2D" uid="uid://bgrja68cx3bxi" path="res://purple gun/purple proj.png" id="2_ehwgj"]

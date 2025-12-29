@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1edxj66qns4e"]
+[gd_scene load_steps=8 format=3 uid="uid://3qjyxtgnx067"]
 
 [ext_resource type="Script" uid="uid://brxx0dev2acc4" path="res://gun_template.gd" id="1_da526"]
 [ext_resource type="Texture2D" uid="uid://dvelx687d6e0e" path="res://sixgun/six.png" id="2_6ywj4"]
-[ext_resource type="PackedScene" uid="uid://bqgkejcuvbiw8" path="res://six_bullet.tscn" id="2_ivf5m"]
+[ext_resource type="PackedScene" uid="uid://c84cyh4muuare" path="res://six_bullet.tscn" id="2_ivf5m"]
 [ext_resource type="Texture2D" uid="uid://c3qtvmccowpsc" path="res://sixgun/seven.png" id="3_da526"]
 [ext_resource type="AudioStream" uid="uid://nvmr7pderl3c" path="res://sounds/doot-doot-6-7.mp3" id="3_he01q"]
-[ext_resource type="PackedScene" uid="uid://bpvqq7bqbeppi" path="res://sevenbul.tscn" id="3_m3sur"]
+[ext_resource type="PackedScene" uid="uid://bjmom70mqa21t" path="res://sevenbul.tscn" id="3_m3sur"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
 radius = 385.1052
