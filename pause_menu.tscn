@@ -1,0 +1,111 @@
+[gd_scene load_steps=3 format=3 uid="uid://hyjqq7o6q8ew"]
+
+[ext_resource type="PackedScene" uid="uid://dwf7eilgvll81" path="res://prod_label.tscn" id="1_hdmo1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nwcfo"]
+
+[node name="pauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 90
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1917.0
+offset_bottom = 1064.0
+color = Color(0, 0, 0, 0.47843137)
+
+[node name="menuTitle" type="Label" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -507.0
+offset_top = 64.0
+offset_right = 517.0
+offset_bottom = 341.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1.0964829, 0.6299403, 0.19335906, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nwcfo")
+text = "Fris's Pause Menu
+(how do i name stuff)"
+horizontal_alignment = 1
+
+[node name="unpause" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -207.0
+offset_top = -647.0
+offset_right = 204.0
+offset_bottom = -537.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.3882353, 0.8, 0.37254903, 1)
+theme_override_font_sizes/font_size = 74
+text = "Continue"
+
+[node name="restart" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.5
+offset_top = 13.0
+offset_right = 205.5
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3882353, 0.8, 0.37254903, 1)
+theme_override_font_sizes/font_size = 74
+text = "Restart"
+
+[node name="gotoMenu" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = 139.0
+offset_right = 229.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3882353, 0.8, 0.37254903, 1)
+theme_override_font_sizes/font_size = 74
+text = "Exit to Menu"
+
+[node name="exit" type="Button" parent="CanvasLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -623.5
+offset_top = 272.0
+offset_right = 623.5
+offset_bottom = 484.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.3882353, 0.8, 0.37254903, 1)
+theme_override_font_sizes/font_size = 74
+text = "Exit to Desktop
+(do ALT+F4 nigga who presses this)"
+
+[node name="prodLabel" parent="CanvasLayer" instance=ExtResource("1_hdmo1")]
+offset_top = -1025.0
+offset_bottom = -994.0

@@ -1,8 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch75qcefjcv4j"]
+[gd_scene load_steps=4 format=3 uid="uid://ch75qcefjcv4j"]
 
 [ext_resource type="Script" uid="uid://c1wjkexni7lkf" path="res://start_menu.gd" id="1_v2mkm"]
-[ext_resource type="FontFile" uid="uid://clhnn82td5ivb" path="res://fonts/Retro Gaming.ttf" id="2_ctwoq"]
-[ext_resource type="Texture2D" uid="uid://dov8ac7kpcvw8" path="res://trees/copy.png" id="3_ppfnh"]
 [ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://trees/pine_tree.png" id="4_7boi2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndybt"]
@@ -40,26 +38,6 @@ theme_override_colors/font_color = Color(1.0964829, 0.6299403, 0.19335906, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ndybt")
 text = "just survive and try weapons ig idk"
-
-[node name="prodLabel" type="Label" parent="startUI"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 131.0
-offset_top = -94.0
-offset_right = 390.0
-offset_bottom = -63.0
-grow_vertical = 0
-theme_override_colors/font_color = Color(1.096, 1.096, 1.096, 1)
-theme_override_fonts/font = ExtResource("2_ctwoq")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxEmpty_ndybt")
-text = "limeon™️ productions"
-
-[node name="limeonLogo" type="Sprite2D" parent="startUI/prodLabel"]
-position = Vector2(-62.53241, 15.875061)
-scale = Vector2(0.20172438, 0.20172438)
-texture = ExtResource("3_ppfnh")
 
 [node name="menuTitle" type="Label" parent="startUI"]
 anchors_preset = 5
