@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=3 uid="uid://ch75qcefjcv4j"]
+
+[ext_resource type="Script" uid="uid://c1wjkexni7lkf" path="res://start_menu.gd" id="1_v2mkm"]
+[ext_resource type="FontFile" uid="uid://clhnn82td5ivb" path="res://fonts/Retro Gaming.ttf" id="2_ctwoq"]
+[ext_resource type="Texture2D" uid="uid://dov8ac7kpcvw8" path="res://trees/copy.png" id="3_ppfnh"]
+[ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://trees/pine_tree.png" id="4_7boi2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ndybt"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v2mkm")
+
+[node name="startUI" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="bgColor" type="ColorRect" parent="startUI"]
+offset_right = 1920.0
+offset_bottom = 1069.0
+color = Color(0.08235294, 0.34901962, 0.24705882, 1)
+
+[node name="menuText" type="Label" parent="startUI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -37.0
+offset_right = 417.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1.0964829, 0.6299403, 0.19335906, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ndybt")
+text = "just survive and try weapons ig idk"
+
+[node name="prodLabel" type="Label" parent="startUI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 131.0
+offset_top = -94.0
+offset_right = 390.0
+offset_bottom = -63.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1.096, 1.096, 1.096, 1)
+theme_override_fonts/font = ExtResource("2_ctwoq")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ndybt")
+text = "limeon™️ productions"
+
+[node name="limeonLogo" type="Sprite2D" parent="startUI/prodLabel"]
+position = Vector2(-62.53241, 15.875061)
+scale = Vector2(0.20172438, 0.20172438)
+texture = ExtResource("3_ppfnh")
+
+[node name="menuTitle" type="Label" parent="startUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -434.0
+offset_top = 181.0
+offset_right = 444.0
+offset_bottom = 318.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1.0964829, 0.6299403, 0.19335906, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ndybt")
+text = "Fris's Godot Game"
+
+[node name="treeBR" type="Sprite2D" parent="startUI"]
+position = Vector2(1493.6847, 737.04285)
+rotation = 0.25620234
+texture = ExtResource("4_7boi2")
+
+[node name="treeTR" type="Sprite2D" parent="startUI"]
+position = Vector2(1552.0004, 394.99997)
+rotation = 0.3921442
+texture = ExtResource("4_7boi2")
+
+[node name="bozoBL" type="Sprite2D" parent="startUI"]
+position = Vector2(488.00006, 737.00006)
+rotation = -0.50946164
+texture = ExtResource("4_7boi2")
+
+[node name="treeTL" type="Sprite2D" parent="startUI"]
+position = Vector2(293, 450)
+rotation = -0.3735198
+texture = ExtResource("4_7boi2")
+
+[node name="StartButton" type="Button" parent="startUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -207.0
+offset_top = -408.0
+offset_right = 204.0
+offset_bottom = -298.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.3882353, 0.8, 0.37254903, 1)
+theme_override_font_sizes/font_size = 74
+text = "Start Game"
+
+[connection signal="pressed" from="startUI/StartButton" to="." method="_on_start_button_pressed"]
