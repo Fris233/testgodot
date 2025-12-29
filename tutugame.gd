@@ -1,5 +1,5 @@
 extends Node2D
-
+@onready var pauser := preload("res://pause_menu.tscn")
 @onready var gameover := %gameover
 const MAXMOBS := 25
 var mob_count := 0
@@ -27,3 +27,16 @@ func _on_have_sex_health_depleted() -> void:
 	gameover.process_mode = Node.PROCESS_MODE_ALWAYS
 	gameover.play()
 	get_tree().paused = true
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_released("pause"):
+		pauseInput()
+
+func pauseInput():
+	var paused := pauser.instantiate()
+	get_parent().add_child(paused)
+	paused.setroot(self)
+
+
+func _on_button_pressed() -> void:
+	pauseInput()

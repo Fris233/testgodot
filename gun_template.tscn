@@ -1,16 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccwe7fkmbkkkd"]
+[gd_scene load_steps=5 format=3 uid="uid://u867wb3akxq4"]
 
-[ext_resource type="Script" path="res://mattgun.gd" id="1_vm7ct"]
-[ext_resource type="Texture2D" uid="uid://cbf1cms18lga8" path="res://mattgun/mattsonic.png" id="2_pon3r"]
-[ext_resource type="AudioStream" uid="uid://bom8jp2fdiq1s" path="res://sounds/mattgunsound.mp3" id="3_pon3r"]
+[ext_resource type="Script" uid="uid://bpp65mpewga7m" path="res://mattgun.gd" id="1_q7lwk"]
+[ext_resource type="Texture2D" uid="uid://cbf1cms18lga8" path="res://mattgun/mattsonic.png" id="2_jemv4"]
+[ext_resource type="AudioStream" uid="uid://bom8jp2fdiq1s" path="res://sounds/mattgunsound.mp3" id="3_ghqfp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fxllu"]
 radius = 385.1052
 
-[node name="mattgun" type="Area2D"]
+[node name="GunTemplate" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_vm7ct")
+script = ExtResource("1_q7lwk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fxllu")
@@ -21,7 +21,7 @@ shape = SubResource("CircleShape2D_fxllu")
 position = Vector2(155, -9.999999)
 rotation = 0.7853982
 scale = Vector2(0.55875105, 0.55875105)
-texture = ExtResource("2_pon3r")
+texture = ExtResource("2_jemv4")
 
 [node name="Bullleter" type="Marker2D" parent="Pivot/Pistol"]
 unique_name_in_owner = true
@@ -34,6 +34,6 @@ autostart = true
 
 [node name="gunsound" type="AudioStreamPlayer" parent="Timer"]
 unique_name_in_owner = true
-stream = ExtResource("3_pon3r")
+stream = ExtResource("3_ghqfp")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

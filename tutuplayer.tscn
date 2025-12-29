@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_7gvwu"]
 [ext_resource type="Script" uid="uid://bmwb7drpojccx" path="res://tutuplayer.gd" id="1_ek44r"]
-[ext_resource type="PackedScene" uid="uid://cp8aqqpy68x1e" path="res://mattgun.tscn" id="2_ekcj8"]
+[ext_resource type="PackedScene" uid="uid://ccwe7fkmbkkkd" path="res://mattgun.tscn" id="2_ekcj8"]
 [ext_resource type="PackedScene" uid="uid://dbgmb2oaydsud" path="res://purplegun.tscn" id="3_ekcj8"]
 [ext_resource type="PackedScene" uid="uid://du5i8r7jdycua" path="res://gun.tscn" id="4_bx3gj"]
 [ext_resource type="PackedScene" uid="uid://cfrp2irh3h0hh" path="res://virtual_joystick.tscn" id="5_6hb5w"]
-[ext_resource type="PackedScene" uid="uid://dljilbcmj0opm" path="res://gun_67.tscn" id="5_mvnsu"]
+[ext_resource type="PackedScene" uid="uid://3qjyxtgnx067" path="res://gun_67.tscn" id="5_mvnsu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ek44r"]
 radius = 30.16

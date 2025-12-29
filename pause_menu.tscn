@@ -1,16 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://hyjqq7o6q8ew"]
+[gd_scene load_steps=4 format=3 uid="uid://hyjqq7o6q8ew"]
 
 [ext_resource type="PackedScene" uid="uid://dwf7eilgvll81" path="res://prod_label.tscn" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://bjm7nbev2oj6d" path="res://pause_menu.gd" id="1_nwcfo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nwcfo"]
 
 [node name="pauseMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nwcfo")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 90
@@ -109,3 +112,8 @@ text = "Exit to Desktop
 [node name="prodLabel" parent="CanvasLayer" instance=ExtResource("1_hdmo1")]
 offset_top = -1025.0
 offset_bottom = -994.0
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/unpause" to="." method="_on_unpause_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/gotoMenu" to="." method="_on_goto_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/exit" to="." method="_on_exit_pressed"]

@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dljilbcmj0opm"]
+[gd_scene load_steps=6 format=3 uid="uid://3qjyxtgnx067"]
 
-[ext_resource type="Script" uid="uid://carbapxps13ju" path="res://gun_67.gd" id="1_1bb4v"]
+[ext_resource type="Script" path="res://gun_67.gd" id="1_1bb4v"]
 [ext_resource type="Texture2D" uid="uid://dvelx687d6e0e" path="res://sixgun/six.png" id="2_6ywj4"]
 [ext_resource type="Texture2D" uid="uid://c3qtvmccowpsc" path="res://sixgun/seven.png" id="3_da526"]
 [ext_resource type="AudioStream" uid="uid://nvmr7pderl3c" path="res://sounds/doot-doot-6-7.mp3" id="3_he01q"]

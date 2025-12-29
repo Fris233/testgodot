@@ -41,6 +41,8 @@ func _physics_process(delta: float) -> void:
 func _ready():
 	choose_gun(2)
 	choice_menu.visible = false
+	if OS.has_feature("pc"):
+		joystick.queue_free()
 	
 	# Connect the UI buttons
 	# You can also do this via the Editor's Node tab
@@ -91,3 +93,9 @@ func _on_button_3_pressed():
 	
 func _on_button_4_pressed():
 	choose_gun(3)
+
+func _enter_tree():
+	# As soon as the player enters the world, force the camera to take over.
+	# Make sure the node name matches exactly.
+	if has_node("Camera2D"):
+		$Camera2D.make_current()
