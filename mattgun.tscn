@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccwe7fkmbkkkd"]
+[gd_scene load_steps=8 format=3 uid="uid://ccwe7fkmbkkkd"]
 
-[ext_resource type="Script" path="res://mattgun.gd" id="1_vm7ct"]
+[ext_resource type="Script" uid="uid://brxx0dev2acc4" path="res://gun_template.gd" id="1_myc6f"]
+[ext_resource type="PackedScene" uid="uid://dn7611fnlye45" path="res://mattbullet.tscn" id="2_cpyns"]
 [ext_resource type="Texture2D" uid="uid://cbf1cms18lga8" path="res://mattgun/mattsonic.png" id="2_pon3r"]
+[ext_resource type="PackedScene" uid="uid://c4baf4thrijeq" path="res://mattbullet_2.tscn" id="3_ls1ps"]
 [ext_resource type="AudioStream" uid="uid://bom8jp2fdiq1s" path="res://sounds/mattgunsound.mp3" id="3_pon3r"]
+[ext_resource type="PackedScene" uid="uid://bgk18ri1lcifm" path="res://mattbullet_3.tscn" id="4_hrnp2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fxllu"]
 radius = 385.1052
@@ -10,7 +13,12 @@ radius = 385.1052
 [node name="mattgun" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_vm7ct")
+script = ExtResource("1_myc6f")
+fire_rate = 1.23
+bulletscenes = Array[PackedScene]([ExtResource("2_cpyns"), ExtResource("3_ls1ps"), ExtResource("4_hrnp2")])
+anglearray = Array[float]([-30.0, 0.0, 30.0])
+gun_sfx = ExtResource("3_pon3r")
+gun_chargeup = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fxllu")
@@ -27,13 +35,3 @@ texture = ExtResource("2_pon3r")
 unique_name_in_owner = true
 position = Vector2(78.34146, -89.55491)
 rotation = -0.7853982
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 1.23
-autostart = true
-
-[node name="gunsound" type="AudioStreamPlayer" parent="Timer"]
-unique_name_in_owner = true
-stream = ExtResource("3_pon3r")
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

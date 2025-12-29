@@ -1,10 +1,11 @@
 extends Area2D
 
-@export_group("Stats")
-@export var fire_rate := 0.5
+@export_group("Gun Stats")
+@export var fire_rate : float
 @export var bulletscenes : Array[PackedScene]
 @export var anglearray : Array[float]
 @export var gun_sfx : AudioStream
+@export var gun_chargeup : float 
 
 var timer: Timer
 var sound_player: AudioStreamPlayer
@@ -20,7 +21,7 @@ func _ready() -> void:
 	timer = Timer.new()
 	timer.wait_time = fire_rate
 	timer.autostart = true
-	timer.timout.connect(_on_timer_timeout)
+	timer.timeout.connect(_on_timer_timeout)
 	add_child(timer)
 	
 	sound_player = AudioStreamPlayer.new()
@@ -37,4 +38,5 @@ func shoot():
 
 func _on_timer_timeout() -> void:
 	sound_player.play()
+	await get_tree().create_timer(gun_chargeup).timeout
 	shoot()

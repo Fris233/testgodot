@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c84cyh4muuare"]
 
-[ext_resource type="Script" path="res://six_bullet.gd" id="1_gkcmr"]
+[ext_resource type="Script" uid="uid://cack1lqt2f5mq" path="res://bullet_template.gd" id="1_gkcmr"]
 [ext_resource type="Texture2D" uid="uid://dvelx687d6e0e" path="res://sixgun/six.png" id="2_gkcmr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2b2rl"]
@@ -11,6 +11,10 @@ top_level = true
 collision_layer = 0
 collision_mask = 3
 script = ExtResource("1_gkcmr")
+bulletsped = 300.0
+rangebuff = 700.0
+damage = 2
+max_piercing = 6
 
 [node name="Projectile" type="Sprite2D" parent="."]
 position = Vector2(4.7683716e-07, 0)

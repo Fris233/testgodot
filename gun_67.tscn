@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://3qjyxtgnx067"]
+[gd_scene load_steps=8 format=3 uid="uid://3qjyxtgnx067"]
 
-[ext_resource type="Script" path="res://gun_67.gd" id="1_1bb4v"]
+[ext_resource type="Script" uid="uid://brxx0dev2acc4" path="res://gun_template.gd" id="1_da526"]
 [ext_resource type="Texture2D" uid="uid://dvelx687d6e0e" path="res://sixgun/six.png" id="2_6ywj4"]
+[ext_resource type="PackedScene" uid="uid://c84cyh4muuare" path="res://six_bullet.tscn" id="2_ivf5m"]
 [ext_resource type="Texture2D" uid="uid://c3qtvmccowpsc" path="res://sixgun/seven.png" id="3_da526"]
 [ext_resource type="AudioStream" uid="uid://nvmr7pderl3c" path="res://sounds/doot-doot-6-7.mp3" id="3_he01q"]
+[ext_resource type="PackedScene" uid="uid://bjmom70mqa21t" path="res://sevenbul.tscn" id="3_m3sur"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
 radius = 385.1052
@@ -11,7 +13,11 @@ radius = 385.1052
 [node name="gun67" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_1bb4v")
+script = ExtResource("1_da526")
+fire_rate = 1.2
+bulletscenes = Array[PackedScene]([ExtResource("2_ivf5m"), ExtResource("3_m3sur")])
+anglearray = Array[float]([-20.0, 20.0])
+gun_sfx = ExtResource("3_he01q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dk5gl")
@@ -34,13 +40,3 @@ position = Vector2(66, 42.999996)
 rotation = 1.9198622
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_da526")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 1.2
-autostart = true
-
-[node name="gunsound" type="AudioStreamPlayer" parent="Timer"]
-unique_name_in_owner = true
-stream = ExtResource("3_he01q")
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

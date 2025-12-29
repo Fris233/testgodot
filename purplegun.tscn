@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbgmb2oaydsud"]
+[gd_scene load_steps=7 format=3 uid="uid://dbgmb2oaydsud"]
 
-[ext_resource type="Script" uid="uid://cs7knoxtk6voi" path="res://purplegun.gd" id="1_xg1dn"]
+[ext_resource type="Script" uid="uid://brxx0dev2acc4" path="res://gun_template.gd" id="1_4lpjm"]
+[ext_resource type="PackedScene" uid="uid://bmxbd4u4ed6mx" path="res://purple_bullet.tscn" id="2_ie6ul"]
 [ext_resource type="Texture2D" uid="uid://ds1jr7u2f780m" path="res://purple gun/only hand.png" id="2_n8mea"]
 [ext_resource type="PackedScene" uid="uid://dnygh2qbj6wht" path="res://gojo-purp-sound.tscn" id="3_n8mea"]
+[ext_resource type="AudioStream" uid="uid://brteasiv16pvo" path="res://sounds/hollowpurple.mp3" id="3_shaev"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
 radius = 385.1052
@@ -10,7 +12,12 @@ radius = 385.1052
 [node name="purplegun" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_xg1dn")
+script = ExtResource("1_4lpjm")
+fire_rate = 3.11
+bulletscenes = Array[PackedScene]([ExtResource("2_ie6ul")])
+anglearray = Array[float]([0.0])
+gun_sfx = ExtResource("3_shaev")
+gun_chargeup = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dk5gl")
